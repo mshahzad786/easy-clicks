@@ -2,9 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navbar from './components/navbar';
 import Home from './pages/index';
+import Tome from 'Tome';
 import Contact from './pages/contact';
-import About from './pages/about'
+import About from './pages/about';
 import Buttons from './components/buttons'
+
 
 
 function App() {
@@ -29,10 +31,19 @@ function App() {
         
       </div>
       
+      <Tome />
     </Router>
     
   );
+  
 
 }
+
+
+
+
+
+
+
 
 export default App;
