@@ -1,10 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 
-function About() {
+
+
+
+
+class Checking extends Component{
+  render(){
+    return(
+      <h1>checking</h1>
+    )
+  }
+}
+
+
+
+export default function About() {
 
   return(
     
-  <div>
+    <div>
+    <Checking/>
     <h1> This Is About </h1>
   </div>
     
@@ -13,4 +28,3 @@ function About() {
 
 }
 
-export default About;

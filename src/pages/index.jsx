@@ -4,14 +4,19 @@ import Home1 from "react"
 
 
 
+
 function Home() {
 
   
   return(
+
     
     <div>
     <h1> This Is Home </h1>
-    </div>
+
+    
+  </div>
+
   )
 }
 

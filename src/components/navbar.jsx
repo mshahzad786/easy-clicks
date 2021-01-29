@@ -1,27 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+
 function Navbar() {
 
   return(
 
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="https://youtu.be/cVyTj0MOgfs">EASY CLICK's</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary container-fluid">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="https://youtu.be/cVyTj0MOgfs">EASY CLICK's</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <Link to="/" class="nav-link">Home</Link>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link to="/" className="nav-link">Home</Link>
         </li>
-        <li class="nav-item">
-          <Link to="./contact" class="nav-link">Contact</Link>
+        <li className="nav-item">
+          <Link to="./contact" className="nav-link">Contact</Link>
         </li>
-        <li class="nav-item">
-          <Link to="./about" class="nav-link">About</Link>
+        <li className="nav-item">
+          <Link to="./about" className="nav-link">About</Link>
         </li>
         <li>
 

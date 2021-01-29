@@ -5,6 +5,11 @@ import Home from './pages/index';
 import Contact from './pages/contact';
 import About from './pages/about';
 import Buttons from './components/buttons'
+import Test from './pages/test'
+
+
+
+
 
 
 
@@ -22,11 +27,11 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+            <Test/>
           </Route>
           <Route path="/about">
             <About />
         </Route>
-        <button type="button" className="btn btn-primary">Primary</button>
 
             <Buttons/>
         
