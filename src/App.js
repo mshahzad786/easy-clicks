@@ -1,11 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Navbar from './components/navbar';
 import Home from './pages/index';
 import Contact from './pages/contact';
 import About from './pages/about';
 import Buttons from './components/buttons'
 import Test from './pages/test'
+import NewComponent from './pages/Login'
 
 
 
@@ -19,9 +20,10 @@ function App() {
   return (
     <Router>
 
+
       <div>
+
         <Navbar/>
-        
         <Route exact path="/">
             <Home />
           </Route>
@@ -33,23 +35,16 @@ function App() {
             <About />
         </Route>
 
-            <Buttons/>
+        <Buttons/>
         
       </div>
-      
-    </Router>
+     </Router>
     
     
   );
   
 
 }
-
-
-
-
-
-
 
 
 export default App;

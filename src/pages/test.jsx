@@ -11,8 +11,8 @@ function Test() {
 
     <div>
       <h1> Test Image </h1>
-      
-      <div className="card" style={{ width: '18rem', }} >
+
+      <div className="card" style={{ width: '18rem' }} >
         <img src="https://static.toiimg.com/photo/73078527.cms" className="card-img-top" alt="..."/>
           <div className="card-body">
             <h5 className="card-title">Card title</h5>

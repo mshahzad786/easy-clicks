@@ -7,7 +7,10 @@ import React, { Component } from "react";
 class Checking extends Component{
   render(){
     return(
-      <h1>checking</h1>
+      <div>
+        
+      </div>
+      
     )
   }
 }
