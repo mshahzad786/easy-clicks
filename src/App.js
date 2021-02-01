@@ -7,6 +7,7 @@ import About from './pages/about';
 import Buttons from './components/buttons'
 import Test from './pages/test'
 import NewComponent from './pages/Login'
+import Todo from './pages/Todo'
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Navbar/>
         <Route exact path="/">
             <Home />
+            <Todo />
           </Route>
           <Route path="/contact">
             <Contact />
