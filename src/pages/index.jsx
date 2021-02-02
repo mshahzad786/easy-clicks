@@ -7,22 +7,16 @@ import Bg from "./../images/home page/home.png"
 
 function Home() {
 
-  
-  return(
 
-    
+  return (
+
+
     <div>
-    <h1> This Is Home </h1>
-    <img src={Bg} alt="" width="500" />
-    
-
-    
-  </div>
+      <h1> This Is Home </h1>
+      <img src={Bg} alt="" width="600" />
+    </div>
 
   )
 }
 
-
-
-
-  export default Home;
+export default Home;

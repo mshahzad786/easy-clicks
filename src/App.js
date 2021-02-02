@@ -8,6 +8,7 @@ import Buttons from './components/buttons'
 import Test from './pages/test'
 import NewComponent from './pages/Login'
 import Todo from './pages/Todo'
+import "./App.css"
 
 
 
@@ -19,29 +20,28 @@ import Todo from './pages/Todo'
 function App() {
 
   return (
-    <Router>
+    <div className="main" >
 
-
-      <div>
-
-        <Navbar/>
-        <Route exact path="/">
-            <Home />
-            <Todo />
+      <Router>
+         <Navbar/>
+          <Route exact path="/">
+              <Home />
+              <Todo />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+              <Test/>
+            </Route>
+            <Route path="/about">
+              <About />
           </Route>
-          <Route path="/contact">
-            <Contact />
-            <Test/>
-          </Route>
-          <Route path="/about">
-            <About />
-        </Route>
-
-        <Buttons/>
-        
-      </div>
-     </Router>
-    
+  
+          <Buttons/>
+          
+  
+       </Router>
+      
+    </div>
     
   );
   
