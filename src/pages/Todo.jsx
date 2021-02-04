@@ -53,14 +53,21 @@ render(){
                     value: e.target.value
                 })
             }} type="text" placeholder="Enter value"/>
-            <button onClick={() => this.add()} >Add</button>
+            {/* <button onClick={() => this.add()} >Add</button> */}
+            <button onClick={() => this.add()}  type="button" className="btn btn-outline-primary">Add</button>
 
             
             <div>
                 <ul>
                     {this.state.todos.map((v,i)=>{
-                        return <li key={i}> {v}<button onClick={()=> this.deleteTodo(i)} >Delete</button>
-                        {}<button onChange={(e)=> this.editTodo(i) }>Edit</button> </li>
+                        return <li key={i}> {v}<button type="button" className="btn btn-danger"onClick={()=> this.deleteTodo(i)} >Delete</button>
+                        {/* <button onClick={()=> this.deleteTodo(i)} >Delete</button> */}
+                        <button type="button" className="btn btn-success"onChange={(e)=> this.editTodo(i) }>Edit</button>
+                        <li></li>
+                    
+                        {}
+                        {/* <button onChange={(e)=> this.editTodo(i) }>Edit</button>  */}
+                        </li>
                                
                     })}
                 </ul>
