@@ -9,6 +9,7 @@ import Test from './pages/test'
 import NewComponent from './pages/Login'
 import Todo from './pages/Todo'
 import "./App.css"
+import Apps from './pages/Apps' ;
 
 
 
@@ -26,7 +27,7 @@ function App() {
          <Navbar/>
           <Route exact path="/">
               <Home />
-              <Todo />
+              <Apps />
             </Route>
             <Route path="/contact">
               <Contact />

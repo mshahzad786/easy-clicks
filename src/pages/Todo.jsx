@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import "../App.css"
 
 
 
@@ -26,10 +27,11 @@ add = () => {
     }
 }
 
-editTodo = () =>{
-    console.log("Edit",)
+editTodo = (e, value    ) =>{ 
+    this.setState({
+        value: e.target.value
+    })  
     
-
 }
 
 deleteTodo = (index) =>{
@@ -46,22 +48,38 @@ render(){
 
     return(
         <div>
+            <h6>Use For Class Components & State </h6>
             <h1 className="heading" >Todo Application</h1>
 
-            <input value={this.state.value} onChange={(e)=>{
+
+            <form className="form-inline">
+        <div className="form-group mx-sm-3 mb-2">
+          <label htmlFor="inputPassword2" className="sr-only">Password</label>
+          <input type="text" className="form-control" id="input" value={this.state.value} onChange={(e)=>{
+                this.setState({
+                    value: e.target.value
+                })
+            }} type="text" placeholder="Enter value" />
+        </div>
+        <button type="button" className="btn btn-primary mb-2" onClick={() => this.add()} >Add</button>
+      </form>
+            
+
+            {/* <input value={this.state.value} onChange={(e)=>{
                 this.setState({
                     value: e.target.value
                 })
             }} type="text" placeholder="Enter value"/>
-            <button onClick={() => this.add()} >Add</button>
+            <button type="button" class="btn btn-outline-primary" onClick={() => this.add()} >Add</button> */}
 
             
             <div>
                 <ul>
                     {this.state.todos.map((v,i)=>{
-                        return <li key={i}> {v}<button onClick={()=> this.deleteTodo(i)} >Delete</button>
-                        {}<button onChange={(e)=> this.editTodo(i) }>Edit</button> </li>
-                               
+                        return <li key={i}> {v}<button type="button" class="btn btn-outline-danger" onClick={()=> this.deleteTodo(i)} >Delete</button>
+                        {}<button type="button" class="btn btn-outline-success" onChange={()=> this.editTodo() }>Edit</button></li>
+                        
+                        
                     })}
                 </ul>
             </div>
