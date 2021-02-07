@@ -19,6 +19,11 @@ function Submit() {
             <button type="button" className="btn btn-outline-primary">About</button>
                 {/* <button type="submit">About</button> */}
             </Link>
+            <Link to="./Todo">
+            {/* <button type="button" className="btn btn-success"><Link to="./about">About</Link></button> */}
+            <button type="button" className="btn btn-outline-primary">Todo</button>
+                {/* <button type="submit">About</button> */}
+            </Link>
         </Link>
 
     )
