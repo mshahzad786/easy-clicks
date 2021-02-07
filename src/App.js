@@ -8,6 +8,7 @@ import Buttons from './components/buttons'
 import NewComponent from './pages/Login'
 import Todo from './pages/Todo'
 import "./App.css"
+import Apps from './pages/Apps' ;
 
 
 
@@ -24,8 +25,20 @@ function App() {
         <Router>
           <Navbar />
           <Route exact path="/">
+<<<<<<< HEAD
             <Home />
             <Todo />
+=======
+              <Home />
+              <Apps />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+              <Test/>
+            </Route>
+            <Route path="/about">
+              <About />
+>>>>>>> f496b3009005ef256ae80b2449bcb06bb4900438
           </Route>
           <Route path="/contact">
             <Contact />
