@@ -1,8 +1,8 @@
 import React from "react";
-import Buttons from './../components/buttons';
+import { Link} from "react-router-dom";
 import Bg from "./../images/home page/home.png"
-import { Link } from "react-router-dom";
-import Todo from './Todo'
+import TodoCC from "./../images/apps images/Todo Class Component.gif"
+
 
 
 
@@ -15,13 +15,18 @@ function Home() {
 
     <div>
       <h1> This Is Home </h1>
-      <img src={Bg} alt="" width="600" />
-      <div>
+      {/* <img src={Bg} alt="" width="500" /> */}
 
-      <Link to="../Todo">
-      <button type="button" className="btn btn-outline-primary">Todo App Class Components</button>
-      </Link>
+      <div>
+        <Link to="./Todo">
+
+       <button type="button" className="btn btn-light"><img src={TodoCC} alt="" width="200" /></button>
+        </Link>
+       <h6>TodoApp Class Component</h6>
       </div>
+
+
+
     </div>
 
   )
