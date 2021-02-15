@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "./App.css"
 import Routing from './pages/Routing' ;
-
+import {Provider} from 'react-redux'
+import store from './store'
 
 
 
@@ -16,12 +17,16 @@ function App() {
 
   return (
 
-    <div>
+    <Provider store={store}>
+
       <Routing/>
-    </div>
+    </Provider>
+    
 
   );
 }
 
 
+
 export default App;
+

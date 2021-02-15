@@ -2,19 +2,21 @@ import React from "react";
 import { BrowserRouter as Link} from "react-router-dom";
 import Bg from "./../images/home page/home.png"
 import TodoCC from "./../images/apps images/Todo Class Component.gif"
+import {connect} from 'react-redux'
 
 
 
 
 
-function Home() {
+function Home(props) {
 
 
   return (
 
 
     <div>
-      <h1> This Is Home </h1>
+      {/* <h1> This Is Home </h1> */}
+      <h1> {props.name} </h1>
 
       {/* <img src={Bg} alt="" width="500" /> */}
       <div>
@@ -26,9 +28,27 @@ function Home() {
        <h6>TodoApp Class Component</h6>
       </div>
 
+      <button onClick ={()=> props.updateName() } >click me</button>
+
     </div>
 
   )
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  console.log("State ==>", state )
+    return {
+        name: state.name,
+        email: state.email
+      }
+}
+
+const mapDispatchToProps =(dispatch) =>{
+  return{
+    updateName: () => dispatch({type : "UPDATE_NAME",name : "Omama Muhammad Tahir"})
+  }
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
+

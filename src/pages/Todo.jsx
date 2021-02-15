@@ -5,7 +5,7 @@ import "../App.css"
 
 
 // =====> normal
-class Todo extends React.Component{
+export default class Todo extends React.Component{
     constructor(){
         super()
         this.state = {
@@ -14,6 +14,7 @@ class Todo extends React.Component{
 
         }
     }
+
 
 add = () => {
     if(this.state.value !== ""){
@@ -26,14 +27,6 @@ add = () => {
     }
 }
 
-
-editTodo = (index) =>{
-    var update_value = prompt("Edit this")
-    this.state.todos[index] = update_value
-    this.setState({
-        todos: this.state.todos,
-        value: ""
-    })
 editTodo = (index,val) =>{
 
     this.state.todos[index].edit = true
@@ -60,12 +53,13 @@ deleteTodo = (index) =>{
     })
 }
 
-render(){
 
+render(){
+    
     return(
         <div>
             <h1 className="heading" >Todo Application</h1>
-
+    
             <input value={this.state.value} onChange={(e)=>{
                 this.setState({
                     value: e.target.value
@@ -73,12 +67,12 @@ render(){
             }} type="text" placeholder="Enter value"/>
             {/* <button onClick={() => this.add()} >Add</button> */}
             <button onClick={() => this.add()}  type="button" className="btn btn-outline-primary">Add</button>
-
+    
             
             <div>
                 <ul>
                     {this.state.todos.map((v,i)=>{
-
+    
                         return <li key={i}> {v}
                         {v.edit?
                         <button type="button" className="btn btn-success"onClick={()=> this.editTodo(i.v.title) }>Edit</button> 
@@ -86,28 +80,31 @@ render(){
                         <button type="button" className="btn btn-success"onClick={()=> this.editTodo(i.v.title) }>Edit</button> 
                          }
                         <button type="button" className="btn btn-danger"onClick={()=> this.deleteTodo(i)} >Delete</button>
-                    
-
                         {}
                         </li>
+                        
                                
                     })}
                 </ul>
             </div>
-            
-        </div>
-    );
-  }
-
-}
-export default function ToDo(){
-    return(
-        <div> 
-            <Todo/>
+        
         </div>
     )
-
 }
+}
+
+
+
+
+
+// export default function ToDo(){
+//     return(
+//         <div> 
+            
+//         </div>
+//     )
+
+// }
 
 
 // =====> normal
@@ -202,7 +199,7 @@ export default function ToDo(){
             
 //             <div>
 //                 <ul>
-//                     {this.state.todos.map((v,i)=>{
+//                     { this.state.todos.map((v,i)=>{
 
 //                         return <li key={i}> {v.edit? <input type="text"/> : v.title }
 
