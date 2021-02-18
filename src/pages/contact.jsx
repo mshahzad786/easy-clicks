@@ -1,5 +1,5 @@
 import React from "react";
-import Test from './../pages/test'
+import Test from './../pages/Apps/test'
 
 function Contact() {
 

@@ -5,10 +5,10 @@ import Home from './index';
 import Contact from './contact';
 import About from './about';
 import Buttons from './../components/buttons'
-import NewComponent from './Login'
-import Todo from './Todo'
-import "./../App.css"
-import LifeCycle from "./LifeCycle";
+import NewComponent from './Apps/Login'
+import Todo from './Apps/Todo'
+import "../App.css"
+import LifeCycle from "./Apps/LifeCycle";
 
 
 function Routing() {
@@ -21,6 +21,7 @@ function Routing() {
   
             <Route exact path="/">
               <Home />
+              <Buttons/>
               <LifeCycle />
             </Route>
             <Route path="/contact">
@@ -28,6 +29,9 @@ function Routing() {
             </Route>
             <Route path="/about">
               <About />
+          </Route>
+            <Route path="/Todo">
+              <Todo />
           </Route>
 
         </Router>

@@ -1,30 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TodoCC from "./../images/apps images/Todo Class Component.gif"
+
 
 
 function Submit() {
 
     return (
-        <Link to="./">
-            {/* <button type="submit">Home</button> */}
-            {/* <button type="button" className="btn btn-danger"><Link to="./">Home</Link></button> */}
-            <button type="button" className="btn btn-outline-primary">Home</button>
-            <Link to="./contact">
-                {/* <button type="submit">Contact</button> */}
-            {/* <button type="button" className="btn btn-warning"><Link to="./contact">Contact</Link></button> */}
-            <button type="button" className="btn btn-outline-primary">Contact</button>
-            </Link>
-            <Link to="./about">
-            {/* <button type="button" className="btn btn-success"><Link to="./about">About</Link></button> */}
-            <button type="button" className="btn btn-outline-primary">About</button>
-                {/* <button type="submit">About</button> */}
-            </Link>
+      <div>
+
             <Link to="./Todo">
-            {/* <button type="button" className="btn btn-success"><Link to="./about">About</Link></button> */}
-            <button type="button" className="btn btn-outline-primary">Todo</button>
-                {/* <button type="submit">About</button> */}
+                <button type="button" className="btn btn-light"><img src={TodoCC} alt="" width="200" /></button>
             </Link>
-        </Link>
+            <div>
+                <h6>TodoApp Class Component</h6>
+            </div>
+      </div>
+            
 
     )
    

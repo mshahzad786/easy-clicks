@@ -1,6 +1,4 @@
-import { render } from "@testing-library/react";
 import React from "react";
-import {} from "./../images/home page/home page logo.png"
 
 function Test() {
 

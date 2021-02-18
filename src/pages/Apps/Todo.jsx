@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css"
+import "./../../App.css"
 
 
 
@@ -27,23 +27,31 @@ add = () => {
     }
 }
 
-editTodo = (index,val) =>{
+editTodo = (e, value    ) =>{ 
+        this.setState({
+            value: e.target.value
+        })  
+    
+        
+    }
 
-    this.state.todos[index].edit = true
-    this.setState({
-        todos: this.state.todos,
-        value: ""
-    })
+// editTodo = (index,val) =>{
 
-    // var update_value = prompt("Edit this")
-    // this.state.todos[index] = update_value
-    // this.setState({
-    //     todos: this.state.todos,
-    //     value: ""
-    // })
+//     this.state.todos[index].edit = true
+//     this.setState({
+//         todos: this.state.todos,
+//         value: ""
+//     })
+
+//     var update_value = prompt("Edit this")
+//     this.state.todos[index] = update_value
+//     this.setState({
+//         todos: this.state.todos,
+//         value: ""
+//     })
 
     
-}
+// }
 
 deleteTodo = (index) =>{
     console.log("Sahi", index)
