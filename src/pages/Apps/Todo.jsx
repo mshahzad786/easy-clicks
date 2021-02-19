@@ -32,7 +32,6 @@ editTodo = (e, value    ) =>{
             value: e.target.value
         })  
     
-        
     }
 
 // editTodo = (index,val) =>{

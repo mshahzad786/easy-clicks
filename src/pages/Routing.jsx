@@ -7,6 +7,7 @@ import About from './about';
 import Buttons from './../components/buttons'
 import NewComponent from './Apps/Login'
 import Todo from './Apps/Todo'
+import Apps from './Apps/Apps'
 import "../App.css"
 import LifeCycle from "./Apps/LifeCycle";
 
@@ -21,8 +22,8 @@ function Routing() {
   
             <Route exact path="/">
               <Home />
-              <Buttons/>
-              <LifeCycle />
+              <Apps />
+              {/* <LifeCycle /> */}
             </Route>
             <Route path="/contact">
               <Contact />
