@@ -1,46 +1,37 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Navbar from './../components/navbar';
+import Icon from '.././components/icons'
 import Home from './index';
 import Contact from './contact';
 import About from './about';
-import Buttons from './../components/buttons'
-import NewComponent from './Apps/Login'
 import Todo from './Apps/Todo'
-import Apps from './Apps/Apps'
 import "../App.css"
-import LifeCycle from "./Apps/LifeCycle";
+
 
 
 function Routing() {
 
-    return (
-        <div className="main" >
+  return (
+    <div className="main" >
 
-        <Router>
-          <Navbar />
-  
-            <Route exact path="/">
-              <Home />
-              <Apps />
-              {/* <LifeCycle /> */}
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/about">
-              <About />
-          </Route>
-            <Route path="/Todo">
-              <Todo />
-          </Route>
+      <Router>
+        <Navbar/>
+        <Icon/>
+
+        <Route exact path="/" component={Home} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
+        <Route path="/Todo" component={Todo} />
+             
+         
 
         </Router>
 
     </div>
 
-    )
-   
+    );
+
 }
 
 
